@@ -79,4 +79,16 @@ export class AdminComponent {
         });
 
 	}
+	delete(){
+		var body     : any   = '{"entity" : "admin", "process" : "delete" , "userName" : "'+this.userName+'" , "password" : "'+this.password+'" }',
+         type: 'application/json; charset=utf-8',
+          headers  : any      = new Headers({ 'Content-Type': type }),
+          options  : any      = new RequestOptions({ headers: headers }),
+          url      : any      = "http://localhost/blutech/index.php";
+        this.http.post(url,body,options)
+        .map((res: Response) => res.json())
+        .subscribe((res) => {
+        });
+
+	}
 }
