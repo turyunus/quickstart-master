@@ -12,6 +12,8 @@ export class AdminComponent {
 
 	messages:any;
 	products:any;
+	userName:string;
+	password:string;
 	admin:any;
 	constructor(private http:Http){
 		let body     : any   = '{"entity" : "message", "process" : "select"}',
@@ -61,6 +63,19 @@ export class AdminComponent {
         .subscribe((res) => {
         	this.products=res;
               
+        });
+
+	}
+	login(){
+		var body     : any   = '{"entity" : "admin", "process" : "login" , "userName" : "'+this.userName+'" , "password" : "'+this.password+'" }',
+         type: 'application/json; charset=utf-8',
+          headers  : any      = new Headers({ 'Content-Type': type }),
+          options  : any      = new RequestOptions({ headers: headers }),
+          url      : any      = "http://localhost/blutech/index.php";
+        this.http.post(url,body,options)
+        .map((res: Response) => res.json())
+        .subscribe((res) => {
+        	this.admin=res[0];
         });
 
 	}
