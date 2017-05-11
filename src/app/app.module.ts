@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 
+
 @NgModule({
   imports: [
   	HttpModule,

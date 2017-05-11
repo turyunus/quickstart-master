@@ -9,7 +9,7 @@ div, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 </style>
-<div class="w3-black">
+<div class="w3-black "  >
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
@@ -51,6 +51,7 @@ div, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </header>
 
   <!-- Messages Section -->
+  <div style="margin: 64px;">
   <h3 class="w3-text-light-grey" id="about" >Messages</h3>
   <hr style="width:200px" class="w3-opacity">
   <div class="w3-justify w3-text-grey "  *ngFor="let message of messages">
@@ -64,13 +65,14 @@ div, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
     <hr style="width:100%;" class="w3-opacity">
   </div>
+  </div>
   <br>
     
     
     <!-- Grid for pricing tables -->
     <!-- Product Registration Section -->
     
-    <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-row-padding" style="margin: 64px;">
     <h3 class="w3-block w3-text-light-grey" id="photos"> Product Registration</h3>
     <hr style="width:200px" class="w3-opacity">
       <div class="w3-half w3-margin-bottom">
@@ -111,7 +113,7 @@ div, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   
   
   <!-- Contact Section -->
-  <div class="  w3-text-grey" >
+  <div class="  w3-text-grey" style="margin: 64px;">
   <h3 class="w3-text-light-grey" id="contact">Products In Service</h3>
   <hr style="width:200px" class="w3-opacity">
   <div class="w3-justify w3-text-grey "  *ngFor="let product of products">

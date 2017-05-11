@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Http, Response,Headers,RequestOptions,} from '@angular/http';
 import 'rxjs/Rx';
+import { Providers } from '../../providers/providers';
 
 @Component({
   selector: 'app-admin',
@@ -11,6 +12,7 @@ export class AdminComponent {
 
 	messages:any;
 	products:any;
+	admin:any;
 	constructor(private http:Http){
 		let body     : any   = '{"entity" : "message", "process" : "select"}',
          type: 'application/json; charset=utf-8',
